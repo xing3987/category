@@ -1,0 +1,36 @@
+
+div{width: 500px;height: 500px;background: lightgrey;float: left;}
+/*ul li{background: green}
+ul>li{background: green}
+li+ol{background: green}
+li~ol{background: green}*/
+
+p::first-letter{font-size: 50px}
+p::first-line{color: red}
+p::selection{background: green}
+
+/*a::before{content: "点击" url(1.jpg)}
+a::after{content: "搜索"}*/
+
+/*:root{background: red}
+ol>li:first-child{color: blue}
+li:only-child{color: red}
+li:last-child{color: red}*/
+
+/*li:only-of-type{color: red}*/
+/*ul>li:nth-child(2){color: red}
+li:nth-child(3n){background: red}*/
+/*li:last-of-type{color: red}*/
+/*li:nth-of-type(2){color: red}*/
+/*li:nth-last-of-type(3){color: red}*/
+/*li:empty{background: red}*/
+
+a:active{background: yellow}
+a:hover{color: green}
+a:link{color: red}
+a:visited{color: white}
+input:focus{background: lightyellow}
+input:checked{height: 50px}
+input:enabled{border-radius: 10px}
+p:target{background: green}
+:not(input){font-size:15px}

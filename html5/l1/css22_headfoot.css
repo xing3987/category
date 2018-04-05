@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 320px;
+	background: white;
+	border:1px solid black;
+}
+a{
+	text-decoration: none;
+	color:black;
+}
+a:hover{
+	color:orange;
+}
+ul{
+	list-style-type: none;
+}
+hr{margin-top:5px }
+/**********头部************/
+header{
+	height: 60px;
+	background: red;
+}
+#headerdiv1{
+	height: 30px;
+	display: flex;
+}
+.imgtop{
+	margin: 3px;
+	width: 25px;
+	height: 25px;
+}
+header>div>p{
+	line-height: 30px;
+	text-align: center;
+	color: white;
+	flex: 1;
+	font-weight: bolder;
+}
+#headerdiv2{
+	border-radius: 10px;
+	display: flex;
+	background: white;
+	margin:5px;
+	background-image: url(5.jpg),url(16.jpg);
+	background-size: 20px 20px,20px 20px;
+	background-repeat: no-repeat,no-repeat;
+	background-position: left,right;
+}
+
+#headerdiv2>input{
+	border-radius: 5px;
+	flex: 1;
+
+	margin: 0px 20px;
+}
+/****************底部************/
+footer>nav>ul{
+	width: 320px;
+	height: 50px;
+	background: white;
+	display: flex;
+}
+footer li{
+	list-style-type: none;
+	font-size: 10px;
+	flex:1;
+}
+.footerimg{
+	width: 50px;
+	margin: 3px 3px 0px 3px;
+	height: 30px;
+}
+.footerp{
+	text-align: center;
+}
+footer{
+	position: fixed;
+	bottom: 0px;
+}

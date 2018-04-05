@@ -1,0 +1,12 @@
+
+/**{padding: 0px;margin:0px;}*/
+p{color: red;text-align: justify;
+	text-indent: 2em;text-decoration:underline;
+	letter-spacing: 2px;line-height: 1.5em;
+	text-transform: capitalize;
+	text-shadow: 5px 5px 10px green,6px 6px 9px yellow;
+	white-space:nowrap;text-overflow: ellipsis;
+	-webkit-text-stroke:1.5px red;
+	-webkit-text-fill-color:blue;padding: 10px 50px 5px;
+	border: 3px solid blue;overflow: auto;
+}

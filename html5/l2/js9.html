@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js9</title>
+	<style type="text/css">
+		.d1{
+			background: lightyellow;
+			margin: 50px;
+			text-shadow: 5px 5px 7px red;
+			text-align: center;
+			line-height: 50px;
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body id="body">
+	<h4>学生信息</h4>
+	<a id="a1" name="a1" href="http://www.baidu.com">百度一下</a><br><br>
+	学号：<input type="text" name="xh" id="xh"><br><br>
+	姓名：<input type="text" name="xm" id="xm"><br><br>
+	英语：<input type="text" name="yy" id="yy"><br><br>
+	数学：<input type="text" name="sx" id="sx"><br><br>
+	<input type="button" name="" value="连接改变" onclick="changh3()">
+	<input type="button" name="" value="学号改变" onclick="changxh()">
+	<input type="button" name="" value="姓名边框改变" onclick="changxm()">
+	<input type="button" name="" value="改变标题" onclick="changtt()">
+	<input type="button" name="" value="改变数学框" onclick="changsx()">
+	<input type="button" name="" value="返回节点" onclick="backjd()">
+
+
+
+	<script type="text/javascript">
+		function changh3 () {
+			var a=document.getElementById('a1');
+			a.innerHTML='<b>你好,百度人</b>';
+			a.target='_blank';
+		}
+
+		function changxh () {
+			var b=document.getElementsByTagName('input');
+			b[0].value='123466';
+		}
+
+		function changxm () {
+			var b=document.getElementsByTagName('input');
+			b[1].style.borderRadius= '20px';
+			b[2].style.background = 'red';
+		}
+
+		function changtt () {
+			var c=document.getElementsByTagName('h4');
+			c[0].className='d1 d2';
+		}
+
+		function changsx () {
+			var b=document.getElementsByTagName('input')
+			b[3].type='button';
+			b[3].value='输入成绩'
+			b[3].removeAttribute('value')
+			b[2].setAttribute('value', '110分')
+		}
+
+		function backjd () {
+			var c=document.getElementById('a1');
+			// alert(c.nodeName+'  '+c.href);
+			var bo=document.getElementById('body');
+			var body=bo.childNodes;
+			// alert(body.length)
+			// body[3].style.background='red';
+			// bo.firstElementChild.style.background='red';
+			// bo.firstElementChild.nextElementSibling.style.background='red';
+			// bo.firstElementChild.nextElementSibling.style.background='red';
+			alert(c.attributes);
+		}
+
+	</script>
+</body>
+</html>

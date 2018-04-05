@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js12_img</title>
+	<style type="text/css">
+		input{
+			margin: 10px;
+		}
+		img{
+			display: none;
+		}
+		#bt1,#bt2{
+			border-radius: 20px;
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" name="" id="input1" ><br>
+	<input type="button" name="" id="bt1" value="播放" onclick="setInterval('autoPlay()',1000)">
+	<input type="button" name="" id="bt2" value="添加" onclick="addSrc()"><br>
+	<img src="" alt="" id="img" width="300px" height="300px">
+
+
+	<script type="text/javascript">
+		var srcArray=new Array();
+		var indexImg=0;
+		function addSrc () {
+			var imgUrl=document.getElementById('input1');
+			srcArray.push(imgUrl.value);
+			imgUrl.value='';
+		}
+
+		function autoPlay () {
+			img1=document.getElementById('img');
+			img1.style.display ='block';
+			if(srcArray.length==0){
+				img1.alt='请添加图片';
+			}else{
+				img1.src=srcArray[indexImg];
+			}
+			if (indexImg<srcArray.length-1) {
+				indexImg++;
+			}else if(indexImg==srcArray.length-1){
+				indexImg=0;
+			}
+		}
+	</script>
+</body>
+</html>

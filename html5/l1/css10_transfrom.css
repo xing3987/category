@@ -1,0 +1,40 @@
+
+div{
+	width: 150px;
+	height: 100px;
+	margin: 50px;
+	padding: 20px;
+	background:green;
+	float: left;
+}
+
+#div1:hover{
+	transform: translate(20px,30px);
+}
+
+#div2:hover{
+	transform:scale(0.6,1.5);
+}
+
+#div3:hover{
+	transform:rotate(40deg);
+}
+
+#div4:hover{
+	transform:skew(30deg,30deg);
+}
+
+#div5:hover{
+	transform:matrix(1,0.5,0.8,1,10,20);
+}
+
+#div6:hover{
+	transform:rotate(40deg);
+	transform-origin:right top;
+}
+
+body{perspective:500px;}
+#div7:hover{
+	transform:translate3d(10px,10px,-100px);
+	
+}

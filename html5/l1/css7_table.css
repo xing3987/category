@@ -1,0 +1,9 @@
+
+div{width: 50%;height:600px;float: left;}
+table{background: lightyellow;text-align: center;
+	border-collapse:separate;border-spacing: 10px;
+	caption-side: bottom;empty-cells: hide;table-layout: fixed;}
+td{width: 200px;height: 100px;padding: 5px}
+ul{list-style-type:square;list-style-position: inside;list-style-image: }
+
+ol{list-style: upper-alpha inside url();}

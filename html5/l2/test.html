@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	input{
+		width:100px;
+	}
+	form{
+		display:absolute;
+		margin:50px auto;
+		width:250px;
+	}
+</style>
+<script type="text/javascript">
+		function changeAction () {
+			var form=document.getElementById('form');
+			form.action='update';
+		}
+		function changeAction1 () {
+			var form=document.getElementById('form');
+			form.action='listUserServlet';
+		}
+</script>
+</head>
+<body>
+	<form action="adduser" method="post" id="form">
+		<fieldset>
+			<legend>添加用户</legend>
+			用户名：<input type="text" name="username"><br><br>
+			密   码： <input type="password" name="password"><br><br>
+			电   话： <input type="text" name="tel"><br><br>
+			邮  箱： <input type="text" name="email"><br><br>
+			<input type="submit" value="添加" style="width:50px;margin-left:0px" >
+			<button type='submit' style="width:70px;" onclick="changeAction()">修改数据</button>
+			<input onclick='changeAction1()' type='submit' value="查询数据库" style="width:80px;" >
+		</fieldset>
+	</form>
+</body>
+</html>

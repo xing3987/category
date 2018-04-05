@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js10</title>
+	<style type="text/css">
+		h2,h5{
+			margin: 20px;
+			text-align: center;
+		}
+		p{
+			text-indent: 2em;
+			margin: 20px;
+			font-size: 30px;
+		}
+		#div1{
+			background: lightyellow;
+		}
+		input{
+			margin: 5px;
+			border-radius: 10px;
+			width: 50px;
+			height: 20px;
+			border:1px solid black;
+
+		}
+	</style>
+
+</head>
+<body>
+	<div id="div1">
+		<h2>《如梦令·常记溪亭日暮》</h2>
+		<h5>年代: 宋 作者: 李清照</h5>
+		<input type="button" name="bt1" value="大" onclick="sizeChange('45px')">
+		<input type="button" name="bt2" value="中" onclick="sizeChange('30px')">
+		<input type="button" name="bt3" value="小" onclick="sizeChange('15px')">
+		<p>常记溪亭日暮，沉醉不知归路，
+		兴尽晚回舟，误入藕花深处。
+		争渡，争渡，惊起一滩鸥鹭</p>
+		<p>[解析]还时常记得出游溪亭，
+		一玩就玩到日黑天暮，
+		深深地沉醉，而忘记归路。
+		一直玩到兴尽，回舟返途，
+		却迷途进入藕花的深处。
+		大家争着划呀，船儿抢着渡，
+		惊起了满滩的鸥鹭。</p>
+		<p>[赏析］这是一首忆昔词。寥寥数语，似乎是随意而出，却又惜墨如金，句句含有深意。开头两句，写沉醉兴奋之情。接着写“兴尽”归家，又“误入”荷塘深处，别有天地，更令人流连。最后一句，纯洁天真，言尽而意不尽。 </p>
+	</div>
+	<script type="text/javascript">
+		function sizeChange (size) {
+			
+			var c=document.getElementsByTagName('p');
+			for(var i=0;i<c.length;i++){
+				c[i].style.fontSize=size;
+			}
+			
+		}
+	</script>
+</body>
+</html>

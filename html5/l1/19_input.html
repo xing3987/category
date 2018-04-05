@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lesson19 inpurt</title>
+</head>
+<body>
+	<div>
+		<form action="http://www.baidu.com"; target="_blank"; method="post">
+		用户名：<input type="text" name="user" placeholder="请输入姓名">
+		密  码：<input type="password" name="password" >
+		<input type="submit" name="submit">
+		<input type="reset" name="reset">
+		<input type="button" name="button" value="普通按钮">
+		<input type="image"; src="1.jpg" name="image" width="30px" height="30px"><br><br>
+		地址：<input type="text" name="address" value="地址为*****" readonly="readonly">
+		国家：<input type="text" name="guojia" value="中国" disabled="disabled">
+		邮箱：<input type="email" name="email" required="required" autofocus="">
+		电话：<input type="tel" name="tel" required="required" accesskey="x">
+		网址：<input type="url" name="url" required="required"><br><br>
+
+		</form><hr>
+		<form method="post" action="" target="_blank">
+		数量：<input type="number" name="number" max="20" min="0" step="2">
+		波动范围：<input type="range" name="range" max="20" min="0" step="3">
+		时间：<input type="time" name="time">
+		日期：<input type="date" name="date"><br><br>
+		颜色选择：<input type="color" name="color">
+		搜索：<input type="search" name="search" placeholder="输入内容..">
+		选择文件：<input type="file" accept="image" multiple=""  name="file" >
+		<input type="submit" name="submit"><br>
+		</form>
+		<hr>
+		<form>
+			<h3>你想学的课程是：</h3>
+			<input type="checkbox" name="checkbox" value="a">html
+			<input type="checkbox" name="checkbox" value="b">sql
+			<input type="checkbox" name="checkbox" value="c" checked="">java
+			<input type="checkbox" name="checkbox" value="d">c
+			<input type="checkbox" name="checkbox" value="e">oracle<br>
+
+			<h3>你的性别是:</h3>
+			<input type="radio" name="radio" value="a">男
+			<input type="radio" name="radio" value="b" checked="">女
+		</form>
+	</div>
+</body>
+</html>

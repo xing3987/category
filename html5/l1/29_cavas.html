@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lesson29 cavas</title>
+</head>
+<body>
+ 	<canvas style="background: lightblue" id="canvas" width="1350px" height="450px" >
+ 		
+ 	</canvas>
+ 	<script type="text/javascript">
+ 		var canvas=document.getElementById('canvas');//定义变量获取画布
+ 		var c=canvas.getContext('2d');//设置2D画笔
+ 		c.moveTo(10,10);
+ 		c.lineTo(100,100);
+ 		c.lineWidth=5;
+ 		c.strokeStyle="blue";
+ 		c.lineTo(200,310);
+ 		c.closePath();
+ 		c.stroke();
+
+ 		c.beginPath();
+ 		c.strokeStyle="red";
+ 		c.rect(200,50,100,100);
+ 		c.stroke();
+
+ 		c.beginPath();
+ 		c.strokeStyle="grey";
+ 		c.fillStyle="white";
+ 		c.fillRect(350,100,60,80);
+ 		c.stroke();
+
+ 		c.beginPath();
+ 		c.strokeStyle="black";
+ 		c.strokeRect(350,200,80,100);
+ 		c.stroke();
+
+ 		c.beginPath();
+ 		c.strokeStyle="red";
+ 		c.arc(500,100,50,0,Math.PI*2);
+ 		//c.fill();
+ 		c.stroke();
+
+ 		c.beginPath();
+ 		c.strokeStyle="red";
+ 		c.arc(500,300,50,Math.PI/4,Math.PI,true);
+ 		c.fillStyle="grey";
+ 		c.fill();
+ 		c.closePath();
+ 		c.stroke();
+
+		c.beginPath();
+ 		c.strokeStyle="red";
+ 		c.arc(800,250,200,-Math.PI/3,Math.PI,true);
+ 		c.stroke();
+ 		c.arc(800,250,100,Math.PI,-Math.PI/3,false);
+ 		c.stroke();
+ 		g=c.createRadialGradient(800,250,100,800,250,200);
+ 		g.addColorStop(0,"yellow");
+ 		g.addColorStop(0.5,"red");
+ 		g.addColorStop(1,"white");
+ 		c.fillStyle=g;
+ 		c.fill();
+ 		c.moveTo(850,160);
+ 		c.lineTo(895,77);
+ 		c.stroke();
+
+ 		c.beginPath();
+ 		g=c.createLinearGradient(900,100,1300,300);
+ 		g.addColorStop(0,"yellow");
+ 		g.addColorStop(0.5,"lightgreen");
+ 		g.addColorStop(1,"black");
+ 		c.strokeStyle="red";
+ 		c.moveTo(1200,300);
+ 		c.arc(1100,300,200,0,Math.PI,true);
+ 		c.arc(1100,300,100,Math.PI,0);
+ 		c.fillStyle=g;
+ 		c.fill();
+ 		c.stroke();
+
+ 		c.beginPath();
+ 		c.lineWidth=1;
+ 		c.fillStyle="green";
+ 		c.strokeStyle="green";
+ 		c.font="50px 宋体";
+ 		c.fillText("你好",300,360);
+ 		c.strokeText("你好",1050,180);
+ 		c.stroke();
+ 	</script>
+</body>
+</html>

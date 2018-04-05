@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css13 sample</title>
+	<style type="text/css">
+		img{
+			width: 70px;height: 180px;
+			border:3px groove orange;
+		}
+
+		li{
+			list-style: none;
+			float: left;
+			transform-origin: left top;
+		}
+
+		li:nth-of-type(3n){transform: rotate(15deg);}
+		li:nth-of-type(3n-2){transform: rotate(-15deg);}
+
+		li:hover{
+			transform: rotate(0deg);
+			transform: scale(4,2);
+			transition-property:all;
+			transition-duration: 1s;
+			transition-timing-function: linear; 
+			position: relative;
+			z-index: 100;
+		}
+		li{margin-top:100px; }
+
+		div{
+			width: 90%;height: 500px;
+			background-image: url(sc18.png);
+			margin: auto;
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href=""><img src="1.jpg"></a></li>
+			<li><a href=""><img src="2.jpg"></a></li>
+			<li><a href=""><img src="3.jpg"></a></li>
+			<li><a href=""><img src="4.jpg"></a></li>
+			<li><a href=""><img src="6.jpg"></a></li>
+			<li><a href=""><img src="7.jpg"></a></li>
+			<li><a href=""><img src="8.jpg"></a></li>
+			<li><a href=""><img src="1.jpg"></a></li>
+			<li><a href=""><img src="2.jpg"></a></li>
+			<li><a href=""><img src="3.jpg"></a></li>
+			<li><a href=""><img src="4.jpg"></a></li>
+			<li><a href=""><img src="6.jpg"></a></li>
+			<li><a href=""><img src="7.jpg"></a></li>
+			<li><a href=""><img src="8.jpg"></a></li>
+		</ul>
+	</div>
+</body>
+</html>

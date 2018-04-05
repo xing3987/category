@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js6 bom</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// var b=confirm('你的名字是***么？');
+		// if (b==true) {
+		// 	document.write('是的');
+		// }else{
+		// 	document.write('no');
+		// }
+		// var c=prompt('请输入姓名','***')
+		// document.write(c);
+
+		function openWindow () {
+			open('http://www.baidu.com','baidu','top=100,width=200,height=300,left=500,toolbar=yes');
+		}
+
+	</script>
+<!-- 	<input type="button" name="" value="open" onclick="openWindow()">
+	<input type="button" name="" value="close" onclick="window.close()"> -->
+	<script type="text/javascript">
+		// function fu(){
+		// 	document.write('每两秒执行的代码');
+		// }
+		// var interId=setInterval('fu()',2000);
+
+		// setTimeout('clearInterval(interId)',10000);
+			
+		document.write('widow的高度为：'+window.innerWidth+'<br>');	
+		document.write('widow的宽度为：'+window.innerHeight+'<br>');
+		document.write(history.length);
+
+		// function back () {
+		// 	history.back();
+		// }
+		function forward(){
+			history.forward();
+		}
+		function locationA () {
+			location.assign('js7.html')
+		}
+	</script>
+	<!-- <input type="button" name="" value="back" onclick="back()"> -->
+	<input type="button" name="" value="forward" onclick="forward()">
+	<input type="button" name="" value="js7测试跳转" onclick="locationA()">
+
+</body>
+</html>

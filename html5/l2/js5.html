@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js5</title>
+
+</head>
+<body>
+	<script type="text/javascript">
+		var a=1;
+		var b=10;
+		document.write(Math.random()+'<br>');
+		document.write(Math.floor(Math.random()*9+2)+'<br>');
+		document.write(randomNumber(5,10)+'<br>');
+		function randomNumber (min,max) {
+			var c=max-min+1;
+			var x= Math.floor(Math.random()*c+min);
+			return x;
+		}
+
+		document.write(Math.sin(Math.PI/6)+'<br>');
+
+		var num=10;
+		document.write(num.toString(2)+'<br>');
+		document.write(Number('5')+'<br>');
+		document.write(parseFloat('5.1')+'<br>');
+		document.write(parseInt('5.1')+'<hr>');
+	</script>
+
+	<script type="text/javascript">
+		var str1='hellow world';
+		var str2='bye bye!';
+		var str3;
+		str3=str1.split(' ');
+		document.write(str1.charAt(5)+'<br>');
+		document.write(str1.charCodeAt(5)+'<br>');
+		document.write(str1.concat(str2)+'<br>');
+		document.write(str3[1]+'<br>');
+		document.write(str1.indexOf('r')+'<br>');
+		document.write(str1.toUpperCase()+'<br>');
+		document.write(str1.replace('l','j')+'<br>');
+
+	</script>
+	<script type="text/javascript">
+		function bgChange(){
+			var color=['lightgrey','lightyellow','#faf'];
+			var bg=Math.floor(Math.random()*3);
+			document.bgColor=color[bg];
+		}
+	</script>
+	<input type="button" value="更换背景颜色" onclick="bgChange()">
+
+	<script type="text/javascript">
+		function long18(){
+		  var zhang=new Array('第一招','第二招','第三招','第四招','第五招','第六招','第七招','第八招','第九招','第十招','第十一招','第十二招','第十三招','第十四招','第十五招','第十六招','第十七招','第十八招');
+		   var i=Math.floor(Math.random()*18);
+			alert('郭靖使用降龙十八掌的:' + zhang[i]);
+			// var i=Math.floor(Math.random()*18)
+			// alert('郭靖使用降龙十八掌的：'+zhang[1])
+			
+		}
+	</script>
+	<input type="button" value="降龙十八掌" onclick="long18()">
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+*{padding: 8px}
+h1{color: red}
+p{color: black;}
+div{background: lightgrey;width: 500px;height: 400px;float: left;}
+.class1{background: lightyellow}
+.class2{background: blue;width: 50%}
+h5.class1{width: 80%}
+
+input{border-radius: 10px}
+/*input[value]{background: green}*/
+/*input[value][name]{background: green}*/
+/*input[value="input1"]{background: green}*/
+/*input[style~="15px"]{background: green}*/
+/*input[name^="na"]{background: green}
+input[value$="5"]{background: green}*/
+/*input[name*="input"]{background: red}*/

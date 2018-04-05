@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css20 flex</title>
+	<style type="text/css">
+		.diva,.divb,.divc,.divd{
+			display: flex;
+			margin: 10px;
+			padding: 0px;
+			width: 500px;
+			border:3px solid green;
+			height: 400px;
+		}
+		.div1,.div2,.div3,.div4{
+			font-size: 2em;
+			font-weight: 2em;
+		}
+		.div1{
+			width: 100px;
+			height: 100px;
+			background:red;
+		}
+		.div2{
+			width: 50px;
+			height: 150px;
+			background: yellow;
+		}
+		.div3{
+			width: 150px;
+			height: 50px;
+			background:blue;
+		}
+		.div4{
+			width: 80px;
+			height: 85px;
+			background:grey;
+		}
+
+
+		.diva{
+			/*flex-direction: column;*/
+			flex-flow: column wrap;
+		}
+		.divb{
+			flex-flow: row-reverse wrap-reverse;
+		}
+		.divc{
+			justify-content: space-around;
+		}
+		.divd{
+			align-items: center;
+
+		}
+
+		.divd>.div3{
+			align-self: flex-end;
+		}
+	</style>
+</head>
+<body>
+	<div class="diva">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+		<div class="div3">3</div>
+		<div class="div4">4</div>
+	</div>
+	<div class="divb">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+		<div class="div3">3</div>
+		<div class="div4">4</div>
+	</div>
+	<div class="divc">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+		<div class="div3">3</div>
+		<div class="div4">4</div>
+	</div>
+	<div class="divd">
+		<div class="div1">1</div>
+		<div class="div2">2</div>
+		<div class="div3">3</div>
+		<div class="div4">4</div>
+	</div>
+</body>
+</html>

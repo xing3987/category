@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css12 transition</title>
+	<style type="text/css">
+		div{
+			background:green;
+			width: 200px;height: 100px;
+			margin: 10px;padding: 30px;
+		}
+
+		#div1:hover{
+			background:red;
+			width: 30px;
+			transition-property:all;
+			transition-duration: 1s;
+			transition-delay: 0.5s; 
+			transition-timing-function: linear;
+			animation-fill-mode: forwards;
+		}
+
+		#div2{
+			animation-name: Mydh;
+			animation-duration: 2s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+			animation-delay: 1s;
+		}
+
+		#div3{
+			animation-name: Mydh1;
+			animation-duration: 3s;
+			animation-timing-function: linear;
+			animation-iteration-count:4;
+			animation-direction: alternate;
+		}
+
+		#div4{
+			animation-name: Mydh2;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-iteration-count:infinite;
+			animation-direction: alternate;
+		}
+
+
+
+		@keyframes Mydh{
+			from{
+			
+			}
+			to{
+				margin-left: 500px;
+				background:red;
+			}
+		}
+
+		@keyframes Mydh1{
+			0%{}
+			50%{
+				margin-left: 500px;
+				background:red;
+			}
+			100%{
+				margin-left: 1000px;
+				background:blue;
+			}
+		}
+
+		@keyframes Mydh2{
+			0%{}
+			30%{transform: rotate(180deg)}
+			50%{
+				transform: translate(200px,200px);
+				background:red;
+			}
+			100%{
+				transform: translate(0px,400px);
+				background:red;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<div id="div4"></div>
+	<div id="div5"></div>
+	<div id="div6"></div>
+
+</body>
+</html>

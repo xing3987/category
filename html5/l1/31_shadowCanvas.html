@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lesson31 shadowCanvas</title>
+</head>
+<body>
+	<canvas width="1000" height="550" style="background:  lightgrey" id="canvas">
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas');
+		var c=canvas.getContext('2d');
+
+		c.shadowOffsetX=0;
+		c.shadowOffsetY=8;
+		c.shadowBlur=10;
+		c.shadowColor="black";
+
+		c.beginPath();
+		c.fillStyle="red";
+		c.font="50px 宋体";
+		c.fillText("hellow world!",300,80);
+		c.stroke();
+
+		c.beginPath();
+		c.moveTo(500,300);
+		c.arc(500,300,200,0,Math.PI/3);
+		c.fillStyle="brown";
+		c.fill();
+
+		c.beginPath();
+		c.moveTo(500,300);
+		c.arc(500,300,200,Math.PI/3,Math.PI);
+		c.fillStyle="blue";
+		c.fill();
+
+		c.beginPath();
+		c.moveTo(500,300);
+		c.arc(500,300,200,Math.PI,Math.PI*1.4);
+		c.fillStyle="#654321";
+		c.fill();
+
+		c.beginPath();
+		c.moveTo(500,300);
+		c.arc(500,300,200,Math.PI*1.4,0);
+		c.fillStyle="#123456";
+		c.fill();	
+
+		c.beginPath();
+		c.font="20px 宋体";
+		c.strokeText("150%",550,350);
+		c.strokeText("35%",450,350);
+		c.strokeText("20%",400,250);
+		c.strokeText("30%",500,250);	
+
+	</script>
+</body>
+</html>

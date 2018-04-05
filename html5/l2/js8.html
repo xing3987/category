@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js8 war</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var guojing=new Object();
+		guojing.name="郭靖";
+		guojing.hp=300;
+		guojing.gj=90;
+		guojing.sd=60;
+		guojing.fy=15;
+		guojing.skill=new Array('飞龙在天','亢龙有悔','见龙在田','神龙摆尾');
+
+		var ouyangfeng=new Object();
+		ouyangfeng.name='欧阳锋';
+		ouyangfeng.hp=700;
+		ouyangfeng.gj=65;
+		ouyangfeng.sd=50;
+		ouyangfeng.fy=10;
+		ouyangfeng.skill=new Array('蛤蟆功','大力水手','五毒神掌');
+
+		function gongji () {
+			if(guojing.sd*Math.random()>=ouyangfeng.sd*Math.random()){
+				var a=Math.floor(Math.random()*4);
+				var damage=Math.floor((guojing.gj-ouyangfeng.fy)*Math.random());
+				document.write(guojing.name+"使用了一招"+guojing.skill[a]+"造成了"+damage+"点伤害"+'<hr>')
+				ouyangfeng.hp-=damage;
+				if(ouyangfeng.hp<=0){
+					clearInterval(timego);
+					alert(guojing.name+"取得的胜利"+"gameover~~")
+				}
+			}else{
+				var b=Math.floor(Math.random()*3);
+				var damage=Math.floor((ouyangfeng.gj-guojing.fy)*Math.random());
+				document.write(ouyangfeng.name+"使用了一招"+ouyangfeng.skill[b]+"造成了"+damage+"点伤害"+'<hr>')
+				guojing.hp-=damage;
+				if(guojing.hp<=0){
+					clearInterval(timego);
+					alert(ouyangfeng.name+"取得的胜利"+"gameover~~")
+				}
+			}
+
+		}
+
+		function go(){
+			gongji();
+			document.write('姓名：'+guojing.name+'<br>'+'血量：'+guojing.hp+'<br>');
+			document.write('姓名：'+ouyangfeng.name+'<br>'+'血量：'+ouyangfeng.hp+'<hr>');
+		}
+
+		var timego=setInterval('go()',50);
+	</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js18 video</title>
+	<style type="text/css">
+		#playorstop,#go,#back,#mute{
+			border-radius: 10px;
+			background: orange;
+			width: 50px;height: 50px;
+			position: relative;
+			top: 10px;left: 200px;
+			font-family: 'Webdings';
+			font-size: 30px;
+			color:green;
+		}
+		#go{
+			left: 80px;
+		}
+		#back{
+			left: 150px;
+		}
+		#mute{
+			left: 170px;
+		}
+		#vol{
+			width: 80px;
+			position: relative;
+			left: 180px;
+			top: 25px;
+		}
+		#div1{
+			height: 15px;
+			background: lightyellow;
+			position: relative;
+			top: 0px;
+			width: 500px;
+		}
+		#progress{
+			background: red;
+			height: 15px;
+		}
+	</style>
+</head>
+<body>
+	<video src="C:\Users\Administrator\Desktop\素材\html\sc4\第4章\4-1\video\video.mp4"
+	 	 width="500px" height="300px" controls="controls" id="video"></video>
+	 <div style="width: 500px;height: 100px;background: lightgrey;">
+	 	<div id="div1"><div id="progress"></div></div>
+	 	<button id="playorstop" onclick="playorstop()">4</button>
+	 	<button id="go" onclick="back()">7</button>
+	 	<button id="back" onclick="go()">8</button>
+	 	<button id="mute" onclick="mute()">X</button>
+	 	<input type="range" name="" id="vol" onchange="volume()" max="100" min="0">
+	 </div>
+
+	 <script type="text/javascript">
+	 	var video=document.getElementById('video');
+	 	function playorstop (e) {
+	 		
+	 		var p=document.getElementById('playorstop');
+	 		if(video.paused){
+	 			video.play();
+	 			p.innerHTML=';';
+	 		}else{
+	 			video.pause();
+	 			p.innerHTML=4;
+	 		}
+	 	}
+
+	 	function go () {
+	 		 video.currentTime+=6;
+	 	}
+	 	function back () {
+	 		 video.currentTime-=6;
+	 	}
+	 	function mute () {
+	 		var mute=document.getElementById('mute');
+	 		if(video.muted){
+	 			video.muted=false;
+	 			mute.innerHTML='X';
+	 		}else{
+	 			video.muted=true;
+	 			mute.innerHTML='x';
+	 		}
+	 	}
+	 	function volume () {
+	 		var vol=document.getElementById('vol');
+	 		var mute=document.getElementById('mute');
+	 		video.volume=vol.value/100;
+	 		if(vol.value==0){
+	 			mute.innerHTML='x';
+	 		}else{
+	 			mute.innerHTML='X';
+	 		}
+	 	}
+
+
+	 	function progress () {
+	 		var width=video.currentTime/video.duration*500;
+	 		var progress=document.getElementById('progress');
+	 		progress.style.width=width+'px';
+	 	}
+	 	video.addEventListener('timeupdate',progress)
+	 </script>
+</body>
+</html>

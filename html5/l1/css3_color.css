@@ -1,0 +1,9 @@
+
+body{background: url(1.jpg);}
+div{width: 100%;height: 100px;background: lightyellow}
+#div1{background: red}
+#div2{background: #00ff00}
+#div3{background: rgb(255,255,0)}
+#div4{background: rgba(255,0,255,0.5)}
+#div5{background: hsl(180,50%,50%)}
+#div6{background: hsla(100,50%,50%,0.5)}

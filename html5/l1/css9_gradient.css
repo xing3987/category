@@ -1,0 +1,57 @@
+
+div{
+	background:green;
+	width: 300px;
+	height: 200px;
+	padding:20px;
+	margin: 50px;
+	border:10px groove red;
+}
+
+#div1{
+	background-image: linear-gradient(blue,yellow);
+}
+#div2{
+	background-image: linear-gradient(to right bottom, blue,yellow);
+}
+
+#div3{
+	background-image: linear-gradient(0deg, blue,yellow,red,grey);
+}
+
+#div4{
+	background-image: linear-gradient(45deg, blue 5%,yellow 30%,red 50%,grey 100%);
+}
+
+#div5{
+	background-image:repeating-linear-gradient(45deg, blue 10px,yellow 20px,red 30px,grey 40px);
+}
+
+#div6{
+	background-image:radial-gradient(circle,blue,yellow,red,grey);
+}
+
+#div7{
+	background-image:radial-gradient(circle at top right,blue,yellow,red,grey);
+}
+
+#div8{
+	background-image:radial-gradient(circle closest-side,blue,yellow,red,grey);
+}
+
+#div9{
+	background-image:repeating-radial-gradient(50px,blue,yellow,red,grey);
+}
+
+input{
+	width: 100px;height: 30px;
+	border-radius: 10px;
+	background-image: linear-gradient(to right,grey,red,yellow);
+	text-shadow: 3px 3px 8px green;
+}
+input:hover{
+	width: 100px;height: 30px;
+	border-radius: 10px;
+	background-image: linear-gradient(to left,grey,red,yellow);
+	text-shadow: 3px 3px 8px green;
+}

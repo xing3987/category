@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js14 listener</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background: lightyellow;
+			margin: 10px;
+			text-align: center;
+			color:red;
+		}
+		input{
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div"></div><hr>
+	<input type="button" name="" value="事件1" onclick="chang1(),chang2()">
+	<input type="button" name="" id="bt2" value="事件2">
+	<input type="button" name="" id="bt3" value="事件3">
+	<script type="text/javascript">
+		var div=document.getElementById('div');
+		var body=document.getElementsByTagName('body')[0];
+
+		function chang1 () {
+			div.style.background='green';
+		}
+		function chang2 () {
+			div.innerHTML='chang2事件运行中';
+		}
+
+		var bt2=document.getElementById('bt2');
+		bt2.onclick=chang1;
+
+		var bt3=document.getElementById('bt3');
+		bt3.addEventListener('click',chang1);
+		bt3.addEventListener('click',chang2);
+
+
+		div.addEventListener('mouseover',change3);
+		div.addEventListener('mouseout',change4);
+		div.addEventListener('mousedown',change5);
+		div.addEventListener('mouseup',change6);
+		div.addEventListener('click',change9);
+
+
+		body.addEventListener('keydown',change7);
+		body.addEventListener('keyup',change8);
+		body.addEventListener('mousedown',change10);
+		
+		function change3 () {
+			div.innerHTML='鼠标移入';
+		}
+		function change4 () {
+			div.innerHTML='鼠标移出';
+		}
+		function change5 () {
+			div.innerHTML='鼠标按下';
+		}
+		function change6 () {
+			div.innerHTML='鼠标松开';
+		}
+		function change7 () {
+			// var a=event.keyCode;
+			var a=event.which;
+
+			div.innerHTML='onkeydown事件'+a;
+		}
+		function change8 () {
+			div.innerHTML='onkeyup事件';
+		}
+		function change9 () {
+			var c='鼠标点击的x坐标为：'+event.clientX+'<br>y坐标为：'+event.clientY;
+			div.innerHTML=c;
+		}
+
+		function change10 (event) {
+			window.event.preventDefault();
+			var c=window.event.button;
+			alert(c)
+			// if(c==0){
+			// 	alert('点击了左键')
+			// }else if(c==1){
+			// 	alert('点击了中间')
+			// }
+		}
+	</script>
+</body>
+</html>

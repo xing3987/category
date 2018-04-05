@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js13 li</title>
+	<style type="text/css">
+		input{
+			margin: 10px;
+		}
+		label{
+			margin-left:20px; 
+		}
+		button{
+			margin-left:20px;
+			width: 50px;
+			height: 40px; 
+			border-radius: 20px;
+		}
+		li{
+			margin: 10px;
+			list-style-type: decimal;
+		}
+	</style>
+</head>
+<body>
+	<div id="div">
+		<label>会员ID:</label><input type="text" name="" id="input1"><br>
+		<label>姓  名:</label>  <input type="text" name="" id="input2"><br>
+		<button  onclick="addLi()">添加</button>
+		<button onclick="delLi()">删除</button>
+		<h3>俱乐部会员名单：</h3>
+		<ul id="ul"></ul>
+	</div>
+
+	<script type="text/javascript">
+		 // var idArr=new Array();
+		function addLi(){
+			var input1=document.getElementById('input1');
+			var input2=document.getElementById('input2');
+			// var flag=true;
+			if(input1.value!='' && input2.value!=''){
+				// for(var i=0;i<idArr.length;i++){
+				// 	if(idArr[i]==input1.value){
+				// 		flag=false;
+				// 	}
+				// }
+				// if(flag){
+				// 		idArr.push(input1.value)
+						var ul=document.getElementById('ul');
+						var inTime=new Date();
+
+						var li1=document.createElement('li');
+						li1.innerHTML='会员ID:'+input1.value+'<br>姓名:'+input2.value+'<br>入会时间:'+inTime.toLocaleDateString();
+						ul.appendChild(li1);
+				// }else{
+				// 	alert('会员ID不能重复！！')
+				// }
+			}else{
+				alert('请输入会员ID与姓名');
+			}
+		}
+
+		function delLi() {
+			var input1=document.getElementById('input1').value;
+			input1='会员ID:'+input1+'<br>姓名:';
+			var liArr=document.getElementsByTagName('li');
+			for(var i=0;i<liArr.length;i++){
+				if(liArr[i].innerHTML.indexOf(input1)!=-1){
+					ul.removeChild(liArr[i]);
+					// for(var j;j<idArr.length;j++){
+					// 	if (idArr[j]==input1) {
+					// 		idArr.remove(j);
+					// 	}
+					// }
+					break;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

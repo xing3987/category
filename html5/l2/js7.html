@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js7 window</title>
+	<style type="text/css">
+		input{
+			width: 100px;
+			height: 30px;
+			border-radius: 10px;
+			margin-top:10px; 
+			text-align: center;
+		}
+
+		#text{
+			width: 320px;height: 20px;border-radius: 10px;margin-top:10px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var newwindow;
+
+		function back () {
+			history.back();
+		}
+
+		function button1(){
+			newwindow=open("http://www.baidu.com","newwindow","left=300,top=200,width=300,height=300");
+			newwindow.focus();
+		}
+
+		function button2 () {
+			newwindow.close();
+		}
+
+		function button3 () {
+			newwindow.moveTo(0,0);
+			newwindow.focus();
+		}
+
+		function button4() {
+			newwindow.moveBy(30,30);
+			newwindow.focus();
+		}
+
+		function button5() {
+			newwindow.resizeBy(30,30);
+			newwindow.focus();
+		}
+
+		function button6() {
+			newwindow.focus();
+		}
+
+		function button7() {
+			var ti=new Date();
+			ti=ti.toTimeString();
+			var text=document.getElementById('text');
+			text.value="现在时间是:"+ti;
+		}
+
+			var id1;
+		function interval () {
+			id1=setInterval(button7,1000);
+		}
+
+		function yuan () {
+			var a=parseFloat(prompt("请输入圆的半径", 0));
+			var b=Math.PI*a*a;
+			alert("圆的面积为："+b);
+			var c=confirm("该结果正确么？")
+			if (c) {
+				alert('感谢评价~');
+			}else{
+				alert('让我再想想~')
+			}
+		}
+
+	</script>
+	<input type="button" name="" value="back" onclick="back()"><br>
+	<input type="button" name="" value="open" onclick="button1()"><br>
+	<input type="button" name="" value="close" onclick="button2()"><br>
+	<input type="button" name="" value="moveTo" onclick="button3()"><br>
+	<input type="button" name="" value="moveBy" onclick="button4()"><br>
+	<input type="button" name="" value="resizeBy" onclick="button5()"><br>
+	<input type="button" name="" value="focus" onclick="button6()"><br>
+	<input type="text" name="" id="text"><br>
+	<input type="button" name="" value="显示当前时间" onclick="interval()"><br>
+	<input type="button" name="" value="时间停止" onclick="clearInterval(id1)"><br>
+
+	<input type="button" name="" value="计算圆的面积" onclick="yuan()"><br>
+
+</body>
+</html>

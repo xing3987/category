@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2048</title>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+		var divs=document.getElementsByClassName('div');
+
+		window.onload=function() {
+			for (var i=0;i<divs.length;i++){
+				divs[i].innerHTML=" ";
+				divs[i].style.background='rgba(150,150,150,0.2)';
+			}
+			for(var i=0;i<2;i++){
+				var start=Math.floor(Math.random()*16);
+				divs[start].style.background='lightblue';
+				divs[start].innerHTML=2*(Math.floor(Math.random()*2)+1);
+			}
+			colorChange();
+		}
+
+
+		//添加键盘监听
+		function change7 () {
+		//	 var a=event.keyCode;
+			 a=event.which;
+			 if(a==119){     //键盘上键
+			 	up();
+			 }
+			 else if(a==115){    //键盘下键
+			 	down();
+			 }else if(a==97){   //键盘左键
+			 	left();
+		     }else if(a==100){   //键盘右键
+		     	right();
+			 }
+			colorChange();
+		}
+
+		function up () {//键盘按上键的方法
+						for(var j=0;j<3;j++){
+				for(var i=4;i<divs.length;i++){
+					if (divs[i-4].innerHTML==" ") {
+							divs[i-4].innerHTML=divs[i].innerHTML;
+							divs[i].innerHTML=" ";
+					}else if(divs[i-4].innerHTML==divs[i].innerHTML){
+						divs[i-4].innerHTML=(divs[i-4].innerHTML)*2;
+						divs[i].innerHTML=" ";
+					}					
+				}
+		    }
+		    birth();
+		}
+		function down () {//键盘按下键的方法
+			for(var j=0;j<3;j++){
+				for(var i=11;i>=0;i--){
+					if (divs[i+4].innerHTML==" ") {
+							divs[i+4].innerHTML=divs[i].innerHTML;
+							divs[i].innerHTML=" ";
+					}else if(divs[i+4].innerHTML==divs[i].innerHTML){
+						divs[i+4].innerHTML=(divs[i+4].innerHTML)*2;
+						divs[i].innerHTML=" ";
+					}					
+				}
+		    }
+		    birth();
+		}
+		function left () {//键盘按左键的方法
+			for(var k=0;k<3;k++){
+				for(var j=0;j<13;j=j+4){
+					for(var i=1+j;i<=3+j;i++){
+						if (divs[i-1].innerHTML==" ") {
+							divs[i-1].innerHTML=divs[i].innerHTML;
+							divs[i].innerHTML=" ";
+						}else if(divs[i-1].innerHTML==divs[i].innerHTML){
+							divs[i-1].innerHTML=(divs[i-1].innerHTML)*2;
+							divs[i].innerHTML=" ";
+						}					
+					}
+				}
+			}		    
+		    birth();
+		}
+		function right () {//键盘按右键的方法
+			for(var j=0;j<3;j++){
+				for(var j=0;j<13;j=j+4){
+					for(var i=0+j;i<3+j;i++){
+						if (divs[i+1].innerHTML==" ") {
+							divs[i+1].innerHTML=divs[i].innerHTML;
+							divs[i].innerHTML=" ";
+						}else if(divs[i+1].innerHTML==divs[i].innerHTML){
+							divs[i+1].innerHTML=(divs[i+1].innerHTML)*2;
+							divs[i].innerHTML=" ";
+						}					
+					}
+				}	
+			}
+		    birth(); 
+		}
+
+		function birth () {
+			var b=new Array();
+			for (var i=0;i<divs.length;i++){
+				if(divs[i].innerHTML==" "){
+					b.push(divs[i]);
+				}
+			}
+			var c=Math.floor(Math.random()*b.length);
+			b[c].innerHTML="2";
+		}
+
+		// 方格颜色变化的函数
+		function colorChange () {	
+			for(var i=0;i<divs.length;i++){
+				if (divs[i].innerHTML=="2") {
+					divs[i].style.background='lightblue';
+				}else if(divs[i].innerHTML=="4"){
+					divs[i].style.background='pink';
+				}else if(divs[i].innerHTML=="8"){
+					divs[i].style.background='rgba(30,50,150,0.2)';
+				}else if(divs[i].innerHTML=="16"){
+					divs[i].style.background='rgba(60,100,0,0.2)';
+				}else if(divs[i].innerHTML=="32"){
+					divs[i].style.background='rgba(255,255,0,0.8)';
+				}else if(divs[i].innerHTML=="64"){
+					divs[i].style.background='rgba(180,150,150,0.2)';
+				}else if(divs[i].innerHTML=="128"){
+					divs[i].style.background='rgba(0,0,250,0.2)';
+				}else if(divs[i].innerHTML=="256"){
+					divs[i].style.background='rgba(100,0,150,0.2)';
+				}else if(divs[i].innerHTML=="512"){
+					divs[i].style.background='rgba(0,0,150,0.5)';
+				}else if(divs[i].innerHTML=="1024"){
+					divs[i].style.background='rgba(255,0,50,0.5)';
+				}else if(divs[i].innerHTML=="2048"){
+					divs[i].style.background='rgba(0,0,0,0.6)';
+				}else{
+					divs[i].style.background='rgba(150,150,150,0.2)';
+				}
+			}
+		}		
+	</script>
+
+	<style type="text/css">
+		.div{
+			background: rgba(150,150,150,0.2);
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			justify-content: space-around;
+			align-items: center;
+			line-height: 100px;
+			border: 2px solid grey;
+			padding: 2px;
+			font-size: 50px;
+			border-radius: 20px;
+		}
+
+		h1{
+			text-align: center;
+			color: blue;
+		}
+
+		#restart{
+			text-align: center;
+			margin: 0px auto;
+		}
+		table{
+			display: absolute;
+			background: lightgrey;
+			margin: 20px auto;
+			width: 500px;
+			height: 500px;
+			border: 2px solid grey;
+			background: lightgrey;
+			border-radius: 30px;
+		}
+
+		td{
+			padding: 10px;
+		}
+		#begin{
+			width: 500px;
+			margin: auto;
+		}
+	</style>
+
+</head>
+<body id="body" onkeypress="change7()">
+	<h1>2048</h1>
+	<div id="div">
+		<table>
+			<tr><td><div class="div" id="div2"></div></td><td><div class="div"></div></td><td><div class="div"></div></td><td><div class="div"></div></td></tr>
+			<tr><td><div class="div"></div></td><td><div class="div"></div></td><td><div class="div"></div></td><td><div class="div"></div></td></tr>
+			<tr><td><div class="div"></div></td><td><div class="div"></div></td><td><div class="div"></div></td><td><div class="div"></div></td></tr>
+			<tr><td><div class="div"></div></td><td><div class="div"></div></td><td><div class="div"></div></td><td><div class="div"></div></td></tr>
+		</table>
+		<div id="begin"><input type="button" name="" onclick="window.onload()" value="开始" id="start"></div>
+	</div>
+</body>
+</html>

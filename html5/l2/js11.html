@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js11</title>
+	<style type="text/css">
+		div{
+			margin: auto;
+			width: 400px;
+			height: 250px;
+			background: lightyellow;
+		}
+		h3{
+			text-align: center;
+			margin: 20px;
+			padding: 10px;
+		}
+		label{
+			margin:20px 10px 20px 50px;
+
+		}
+		input{
+			margin: 10px;
+			width: 200px;
+			height: 20px;
+		}
+		button:first-of-type{
+			margin-left:50px;
+		}
+		button{
+			margin: 10px;
+			width: 80px;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h3>计算圆的面积</h3>
+		<label>半径：</label><input type="number" id="text1"><br>
+		<label>面积：</label><input type="text" id="text2"><hr>
+		<button type="submit" name="bt1" onclick="jisuan()">计算</button>
+		<button type="submit" name="bt2" onclick="clearWord()">清空</button>
+	</div>
+	<script type="text/javascript">
+
+		function clearWord() {
+			var t1=document.getElementById('text1');
+			t1.value='';
+			var t2=document.getElementById('text2');
+			t2.value='';
+			
+		}
+
+		function jisuan () {
+			var t=document.getElementById('text1').value;
+			var mj=Math.PI*t*t;
+			document.getElementById('text2').value=mj;
+		}
+	</script>
+</body>
+</html>

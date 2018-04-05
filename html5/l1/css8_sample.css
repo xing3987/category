@@ -1,0 +1,17 @@
+
+div{width: 600px;height: 700px;padding: 40px;
+	border: 20px ridge rgba(200,60,30,0.6);
+	font-size: 12px;line-height: 25px;
+ 	background-image: url(sc16.png),url(sc17.png),url(sc5.png),url(sc18.png);
+ 	background-repeat: no-repeat,no-repeat,repeat,repeat;
+ 	background-size: 200px,25%,auto 100px;
+ 	background-position: top left,right bottom,center;
+ 	background-origin: border-box,border-box,content-box ;
+ 	background-clip: border-box,border-box,content-box;
+
+
+ 	}
+
+ p{padding: 0;margin: 0px;
+	font-style: italic;font-weight: bold;
+ 	text-indent: 50px;padding: 50px;text-align: justify;}

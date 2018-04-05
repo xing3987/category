@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js17 canvas</title>
+</head>
+<body>
+	<canvas id="canvas" width="700" height="500" style="background: lightgrey">
+		
+	</canvas>
+	<img src="../l1/1.jpg" width="100" id="img1"><br>
+	<img id="img2">
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas');
+		var g=canvas.getContext('2d');
+
+		// g.beginPath();
+		// g.fillStyle='orange';
+		// g.fillRect(0,0,100,100);
+		// g.closePath();
+
+		// g.beginPath();
+		// g.strokeStyle="red";
+		// g.lineWidth=5;
+		// g.moveTo(150,150);
+		// g.arcTo(150,100,300,100,50);
+		// g.lineTo(300,100);
+		// g.arcTo(350,100,350,200,50);
+		// g.lineTo(350,200);
+		// g.arcTo(350,250,300,250,50);
+		// g.lineTo(200,250);
+		// g.arcTo(150,250,150,200,50);
+		// g.closePath();
+		// g.stroke();
+
+
+		// var img=new Image();
+		// img.src='../l1/1.jpg';
+		// img.width='100px';
+		// img.onload=function(){
+		// 	var pattern=g.createPattern(img,'repeat');
+		// 	g.fillStyle=pattern;
+		// 	g.fillRect(0,0,700,500);
+		// }
+
+		
+		// var img1=document.getElementById('img1');
+		// img1.onload=function () {
+		// var pattern=g.createPattern(img1,'repeat');
+		// 	g.fillStyle=pattern;
+		// 	g.fillRect(0,0,700,500);
+		// }
+
+
+		// g.beginPath();
+		// g.fillStyle='rgba(200,0,0,0.6)';
+		// g.fillRect(100,100,100,100);
+
+		// g.globalAlpha=0.3;
+		// g.globalCompositeOperation='destination-over';
+		// g.fillRect(150,150,100,100);
+
+
+		var img1=document.getElementById('img1');
+		img1.onload=function () {
+			g.drawImage(img1,30,30,100,100);
+		}
+
+		// var url2=canvas.toDataURL();
+		
+		// var img2=document.getElementById('img2');
+
+		// img2.src=url2
+		// img2.onload=function(){
+			
+		// }
+	</script>
+</body>
+</html>
