@@ -28,11 +28,11 @@ public class UpdateCategory extends HttpServlet {
 
 		String categoryType="";
 		if(Type.equals("0")){
-			categoryType="ˮ��";
+			categoryType="水果";
 		}else if(Type.equals("1")){
-			categoryType="����";
+			categoryType="肉类";
 		}else if(Type.equals("2")){
-			categoryType="����ˮ��";
+			categoryType="海鲜水产";
 		}
 
 		Date date=new Date();

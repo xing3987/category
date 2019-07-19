@@ -30,6 +30,7 @@ public class Login extends HttpServlet {
             request.getRequestDispatcher("login.jsp").forward(request, response);
             return;
         }
+        s.removeAttribute("checkCode");
 
         String name = request.getParameter("name");
         String password = request.getParameter("password");

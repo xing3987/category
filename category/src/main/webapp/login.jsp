@@ -80,7 +80,7 @@
                             <label style="font-size:16px">验证码：</label>
                                <input type="text"  name="checkcode" style="width:120px;height:30px">
                                <!-- 在不改变地址的情况下刷新图片,加上？号和一个随机数,该函数写在onclick中每次点击随机生成 -->
-                               <img src="Checkcode" style="magin-top:5px" onclick="this.src='Checkcode?'+Math.random()">
+                               <img src="/Checkcode" style="magin-top:5px" onclick="this.src='/Checkcode?'+Math.random()">
                         </div>
 
                         <div style="margin-left: 45px;margin-top: 10px">
