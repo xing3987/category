@@ -12,9 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.CategoryDao;
 import javaBean.Category;
 
-/**
- * 生鲜列表
- */
+
 public class CategoryList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,7 +27,7 @@ public class CategoryList extends HttpServlet {
 				page1=1;
 			}
 		}
-		List<Category> categorys=categoryDao.selectCategory(page1,10);//分页查询
+		List<Category> categorys=categoryDao.selectCategory(page1,10);
 		request.setAttribute("categorys", categorys);
 		request.setAttribute("page1", page1);
 		RequestDispatcher rd=request.getRequestDispatcher("category-list.jsp");
